@@ -3,7 +3,6 @@ import Youtube from 'react-youtube'
 import { imageUrl ,API_KEY} from "../../constants/constans";
 import axios from "../../axios";
 import toast, { Toaster } from 'react-hot-toast';
-import RowPost from "../rowPosts/rowPost";
 
 
 // For Banner
@@ -19,6 +18,7 @@ const Banner = () => {
       .then((response) => setMoive(response.data.results[random]));
   }, []);
   
+  // funciton for fetch the trailer of movie with youtube API 
   const handlePlay = (movieId) => {
     axios.get(`/movie/${movieId}/videos?api_key=${API_KEY}&language=en-US`).then((response) => {
       if(response.data.results.length !== 0 ){
@@ -33,7 +33,7 @@ const Banner = () => {
     })
   }
 
-  
+  // for configure the youtube
   const opts = {
     height: '390',
     width: '100%',
