@@ -11,8 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-package-lock.json
-vite.config
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -24,3 +22,6 @@ vite.config
 *.sln
 *.sw?
 .eslintrc
+
+package-lock.json
+vite.config
