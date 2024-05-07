@@ -1,7 +1,12 @@
 import React from "react";
+import { useContext } from "react";
+import { SearchCon } from "../../context/searchContext";
 
 // For Nav
 const NavBar = () => {
+
+  const { setSearchMovie } = useContext(SearchCon)
+
   return (
     <div className="navBar">
       <img
@@ -10,12 +15,10 @@ const NavBar = () => {
         alt="Netflix logo"
         />
       <div class="navbarItems">
-        <a className="home">Home</a>
-        <a className="shows">TV Shows</a>
-        <a className="movies">Movies</a>
+      
       </div>
     
-      <input className="searchInput" type="text" placeholder="Search Movie"/>
+      <input className="searchInput" type="text" placeholder="Search Movie" onChange={(e)=>setSearchMovie(e.target.value)}/>
   
       <img  
         className="avatarImg"
