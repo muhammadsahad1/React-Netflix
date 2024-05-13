@@ -51,7 +51,7 @@ const Banner = () => {
           <button className="buttonsBanner">My list</button>
         </div>
         <h1 className="description">
-          {movie.overview}
+          {movie?.overview}
         </h1>
       </div>
       <div className="fade_bottom"></div>
